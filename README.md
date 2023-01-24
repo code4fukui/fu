@@ -1,16 +1,13 @@
-[![Build Status](https://secure.travis-ci.org/goatslacker/fu.png)](http://travis-ci.org/goatslacker/fu)
-[![NPM version](https://badge.fury.io/js/fu.png)](http://badge.fury.io/js/fu)
-[![devDependency Status](https://david-dm.org/goatslacker/fu/dev-status.png)](https://david-dm.org/goatslacker/fu#info=devDependencies)
-
 # fu
 
 the fastest eager-eval functional library for JavaScript.
 
+## Usage
 
-## Install
-
-```
-npm install fu
+```JavaScript
+import fu from "https://code4fukui.github.io/fu/fu.js";
+const a = [1, 2, 3];
+console.log(fu.all(n => typeof n == "number", a));
 ```
 
 ## API
@@ -53,3 +50,7 @@ take
 takeWhile
 zipWith
 ```
+
+## todo
+
+- test

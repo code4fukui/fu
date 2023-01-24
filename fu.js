@@ -1,21 +1,5 @@
 /* global define, toString */
-;(function (name, definition) {
-  'use strict';
-  if (typeof define == 'function') {
-    define(definition)
-  } else if (typeof module != 'undefined' && module.exports) {
-    module.exports = definition()
-  } else {
-    var Module = definition(), global = this, old = global[name]
-    Module.noConflict = function () {
-      global[name] = old
-      return Module
-    }
-    global[name] = Module
-  }
-}).call(this, 'fu', function () {
-  'use strict';
-
+export default (function () {
   var toStr = toString
   var isArray = Array.isArray || function (a) {
     return toStr.call(a) == '[object Array]'
@@ -374,4 +358,4 @@
     unary: arity(1),
     zipWith: zipWith
   }
-});
+})();
